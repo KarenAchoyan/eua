@@ -1,0 +1,85 @@
+.headerTop{
+    width: 100%;
+    height: 50px;
+    background: #002147
+}
+.headerBottom{
+    width: 100%;
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 4%;
+}
+.menu>ul{
+    list-style: none;
+    display: flex;
+}
+.menu>ul>li{
+    margin: 0px 8px;
+    font-size: 14px;
+    font-family: "Mardoto Light";
+    position: relative;
+}
+.logo img{
+    height: 40px;
+}
+
+
+/*drb start*/
+.menu>ul>li:hover>.drb{
+    display: block;
+}
+.menu>ul>li:last-child .drb{
+    right: 0;
+}
+.drb{
+    position: absolute;
+    padding-top: 27px;
+    display: none;
+}
+.drbContent{
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.drb li{
+    list-style: none;
+    padding:10px 20px;
+    border-bottom: 1px solid #ccc;
+    transition: 0.5s;
+    position: relative;
+}
+.drbContent>ul>li:hover{
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+/*drb end*/
+
+/*subDrb start*/
+.subDrb{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+}
+.subDrbContent{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+.drbContent>ul>li:hover .subDrb{
+    display: block;
+    color: black;
+}
+.subDrbContent>ul>li:hover{
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+/*subDrb end*/

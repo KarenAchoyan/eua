@@ -1,0 +1,12 @@
+.container{
+    padding: 30px 4%;
+
+}
+.container>h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.item img{
+    width: 95%;
+}
