@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from "../../styles/layout.module.css"
 import Drb from "./drb/drb";
-import {FacebookOutlined, GooglePlusOutlined, InstagramOutlined, TwitterOutlined} from "@ant-design/icons";
+import Image from "next/image";
 
 const App = ({children}) => {
     const [menus, setMenus] = useState([
@@ -56,9 +56,9 @@ const App = ({children}) => {
                         </div>
                         <div>
                             <ul>
-                                <li><FacebookOutlined /></li>
-                                <li><GooglePlusOutlined /></li>
-                                <li><TwitterOutlined /></li>
+                                {/*<li><FacebookOutlined /></li>*/}
+                                {/*<li><GooglePlusOutlined /></li>*/}
+                                {/*<li><TwitterOutlined /></li>*/}
                             </ul>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const App = ({children}) => {
                 <div className={styles.headerBottom}>
                     <div className={styles.container}>
                         <div className={styles.logo}>
-                            <img src="/logo.png" alt=""/>
+                            <Image width={150} height={50} src="/logo.png" alt=""/>
                         </div>
                         <div className={styles.menu}>
                             <ul>
@@ -88,10 +88,10 @@ const App = ({children}) => {
                     <div className={styles.containerFooter}>
                         <div className={styles.social}>
                             <div className={styles.round}>
-                                <FacebookOutlined />
+                                {/*<FacebookOutlined />*/}
                             </div>
                             <div className={styles.round}>
-                                <InstagramOutlined />
+                                {/*<InstagramOutlined />*/}
                             </div>
                         </div>
                         <div className={styles.info}>

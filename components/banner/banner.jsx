@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/banner.module.css"
+import Image from "next/image";
 
 const Banner = () => {
     const settings = {
@@ -22,7 +23,7 @@ const Banner = () => {
             <Slider {...settings}>
                 {images.map((item) => (
                     <div key={item.id}>
-                        <img src={item.image} alt=""/>
+                        <Image width={1000} height={500} src={item.image} alt=""/>
                     </div>
                 ))}
             </Slider>

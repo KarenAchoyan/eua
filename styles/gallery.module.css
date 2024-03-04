@@ -10,4 +10,6 @@
 }
 .item img{
     width: 95%;
+    height: 150px;
+    object-fit: cover;
 }

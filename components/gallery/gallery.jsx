@@ -74,7 +74,7 @@ const Gallery = () => {
             <Slider {...settings}>
                 {galleries.map((item) => (
                     <div key={item.id} className={styles.item}>
-                        <img src={item.image} alt=""/>
+                        <Image width={200} height={200} src={item.image} alt=""/>
                     </div>
                 ))}
             </Slider>
