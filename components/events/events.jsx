@@ -14,14 +14,56 @@ const Events = () => {
 
     ])
     const settings = {
-        dots: true,
+        dots: false,
+        arrows:true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 6,
+        slidesToScroll: 3,
         prevArrow: <Image width={20} height={20} alt='arrow' src={'/left-arrow.png'}/>,
         nextArrow: <Image  width={20} height={20} alt='arrow' src={'/right-arrow.png'}/>,
+        responsive: [
+            {
+                breakpoint: 1720, // screens larger than 1024px
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1520, // screens larger than 1024px
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 1300, // screens larger than 1024px
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 900, // screens larger than 768px
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 500, // screens larger than 768px
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows:2,
+                    prevArrow: null,
+                    nextArrow: null,
+                },
+            }
+        ],
     };
+
     return (
         <div className={styles.container}>
             <h1>Իրադարձություններ</h1>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from "../../styles/layout.module.css"
 import Drb from "./drb/drb";
+import {FacebookOutlined, GooglePlusOutlined, InstagramOutlined, TwitterOutlined} from "@ant-design/icons";
 
 const App = ({children}) => {
     const [menus, setMenus] = useState([
@@ -46,7 +47,21 @@ const App = ({children}) => {
         <>
             <header>
                 <div className={styles.headerTop}>
-
+                    <div className={styles.row}>
+                        <div>
+                            <ul>
+                                <li>Հասցե. 10 Davit Anhaght str., Yerevan, Armenia</li>
+                                <li>Հեռախոսահամար․(010) 240038</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><FacebookOutlined /></li>
+                                <li><GooglePlusOutlined /></li>
+                                <li><TwitterOutlined /></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.headerBottom}>
                     <div className={styles.container}>
@@ -55,7 +70,7 @@ const App = ({children}) => {
                         </div>
                         <div className={styles.menu}>
                             <ul>
-                                {menus.map((item,index)=>(
+                                {menus.map((item, index) => (
                                     <li key={index}>{item.name}
                                         {item?.subs?.length > 0 ? <Drb subs={item.subs}/> : null}
                                     </li>
@@ -68,8 +83,42 @@ const App = ({children}) => {
             <main>
                 {children}
             </main>
-            <footer>
-
+            <footer className={styles.footer}>
+                <div className={styles.footerTop}>
+                    <div className={styles.containerFooter}>
+                        <div className={styles.social}>
+                            <div className={styles.round}>
+                                <FacebookOutlined />
+                            </div>
+                            <div className={styles.round}>
+                                <InstagramOutlined />
+                            </div>
+                        </div>
+                        <div className={styles.info}>
+                            <ul>
+                                <li>Ֆակուլտետներ</li>
+                                <li>Գլխավոր</li>
+                                <li>Կապ մեզ հետ</li>
+                                <li>Նորություններ</li>
+                            </ul>
+                            <ul>
+                                <li>ԷՋԵՐ</li>
+                                <li>Գլխավոր</li>
+                                <li>Կապ մեզ հետ</li>
+                                <li>Նորություններ</li>
+                            </ul>
+                            <ul>
+                                <li>ՀԵՏԱԴԱՐՁ ԿԱՊ</li>
+                                <li>Հասցե: 10 Davit Anhaght str., Yerevan, Armenia</li>
+                                <li>Հեռախոսահամար: (010) 240038</li>
+                                <li>Էլ-հասցե: info@eua.am</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.footerBottom}>
+                    <p>Կայքը ստեղծվել է GeekLab ընկերության կողմից</p>
+                </div>
             </footer>
         </>
     );

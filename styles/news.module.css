@@ -5,6 +5,7 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: "Mardoto Black";
 }
 .row{
     display: flex;
@@ -25,4 +26,20 @@
 .item h2{
     font-size: 20px;
     margin-top: 5px;
+    font-family: "Mardoto Light";
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .item{
+        width: calc(100% / 2 - 2%);
+        margin: 20px auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .item{
+        width: 98%;
+        margin: 20px auto;
+    }
 }

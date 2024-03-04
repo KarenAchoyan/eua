@@ -5,6 +5,7 @@
 .container>h1{
     text-align: center;
     margin-top: 20px;
+    font-family: "Mardoto Black";
     margin-bottom: 20px;
 }
 .item{
@@ -12,6 +13,7 @@
     height: 200px;
     text-align: center;
     color: white;
+    font-family: "Mardoto Light";
 
 
 }
@@ -28,4 +30,13 @@
 }
 .item h2{
     font-size: 20px;
+    font-family: "Mardoto Light";
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 950px){
+    .itemContent{
+        height: 90%;
+    }
 }
